@@ -58,10 +58,19 @@ const Page = () => {
         setIsSubmitting(true);
         try {
             const response = await axios.post<ApiResponse>('/api/sign-up', data);
-            toast({
-                title: 'Success',
-                description: response.data.message,
-            });
+            if(response.status === 201){
+                toast({
+                    title: 'Success',
+                    description: response.data.message,
+                });
+            }
+            else{
+                toast({
+                    title: response.status,
+                    description: response.message,
+                    variant: 'destructive',
+                });
+            }
       
             router.replace(`/verify/${username}`);
             setIsSubmitting(false);
