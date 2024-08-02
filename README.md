@@ -11,6 +11,7 @@ Welcome to the Anonymous Message Receiver project repository, a Next.js applicat
 - [5. Usage](#5-usage)
 - [6. Live Demo](#6-live-demo)
 - [7. Dependencies](#7-dependencies)
+- [8. Contributing](#8-contributing)
 
 ## 1. Introduction
 
