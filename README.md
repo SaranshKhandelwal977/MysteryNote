@@ -1,66 +1,82 @@
-# MysteryNote - Anonymous Message Receiver - Next.js WebApp
+# MysteryNote - Anonymous Message Receiver - Next.js Project
 
-This is a Next.js website where users can receive anonymous messages via their unique link. Users can toggle the state of "accept messages" to control whether they can receive anonymous messages. The project uses Mistral AI API to suggest random messages and has robust sign-up and sign-in functionality.
+Welcome to the Anonymous Message Receiver project repository, a Next.js application designed to allow users to receive anonymous messages through their unique link. This project includes features such as user authentication, profile management, message suggestions using Mistral AI API, and more.
 
 ## Table of Contents
 
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Live Demo](#live-demo)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [License](#license)
+- [1. Introduction](#1-introduction)
+- [2. Project Functionalities](#2-project-functionalities)
+- [3. Technologies Used](#3-technologies-used)
+- [4. Installation](#4-installation)
+- [5. Usage](#5-usage)
+- [6. Live Demo](#6-live-demo)
+- [7. Dependencies](#7-dependencies)
 
-## Features
+## 1. Introduction
 
-- **Anonymous Messaging**: Users can receive anonymous messages through their unique link.
-- **Toggle Message State**: Users can toggle "accept messages" to enable or disable receiving anonymous messages.
-- **Random Message Suggestions**: Using the Mistral AI API, random messages can be suggested to anonymous message senders.
-- **Username Uniqueness Check**: On sign-up, usernames are checked for uniqueness using debouncing technique.
-- **Email Verification**: After sign-up, users receive a verification code via email to complete the registration process.
-- **User Dashboard**: Users can view received messages, copy their unique link, and toggle the "accept messages" state.
-- **Secure Authentication**: Passwords are hashed using bcrypt.js. Sign-in is implemented using NextAuth.js, while sign-up uses custom React-based authentication.
-- **Form Handling**: React Hook Form is used for form handling.
-- **Email Sending**: Emails are sent using the Resend library and React Email.
-- **Type Safety**: The code is written in TypeScript.
+The Anonymous Message Receiver project aims to provide a platform where users can receive anonymous messages through a unique link. Users can control the state of message acceptance and utilize AI-generated message suggestions. The project includes a robust sign-up and sign-in process, a user dashboard, and secure authentication.
 
-## Technologies Used
+## 2. Project Functionalities
 
-- Next.js
-- React.js
-- TypeScript
-- bcrypt.js
-- NextAuth.js
-- React Hook Form
-- Resend library
-- React Email
-- Zod
-- Mistral AI API
+- **User Authentication:**
+  - Users can sign up with a unique username and email.
+  - Upon sign-up, usernames are checked for uniqueness using a debouncing technique.
+  - An OTP is sent to the user's email for verification.
+  - Users can sign in using their username or email and password.
 
-## Installation
+- **User Profile Management:**
+  - Upon login, users are directed to their dashboard.
+  - Users can see their received messages and manage their profile.
 
-1. Clone this repository:
+- **Anonymous Messaging:**
+  - Users can receive anonymous messages through their unique link.
+  - They can toggle the "accept messages" state to enable or disable message reception.
+  - Anonymous message senders can send messages via the user's unique link.
+  - Suggested messages can be generated using the Mistral AI API.
 
-    ```sh
+- **Random Message Suggestions:**
+  - Users can generate random messages using the Mistral AI API.
+  - Suggested messages can be modified or sent as they are.
+
+## 3. Technologies Used
+
+- **Frontend**:
+  - Next.js: For building the user interface.
+  - React.js: For building components.
+  - TypeScript: For type safety.
+  - React Hook Form: For form handling.
+  - Zod: For form validation.
+  
+- **Backend**:
+  - Node.js: For server-side logic.
+  - bcrypt.js: For password hashing.
+  - NextAuth.js: For authentication.
+  - Resend library: For sending emails.
+  - React Email: For email templates.
+
+- **Other Technologies**:
+  - Mistral AI API: For generating random message suggestions.
+
+## 4. Installation
+
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
     git clone https://github.com/SaranshKhandelwal977/MysteryNote.git
     ```
 
 2. Navigate to the project directory:
-
-    ```sh
+    ```bash
     cd MysteryNote
     ```
 
-3. Install dependencies:
-
-    ```sh
+3. Install the dependencies:
+    ```bash
     npm install
     ```
 
 4. Create a `.env.local` file in the root directory and add the following environment variables:
-
     ```sh
     MONGODBURL="your_mongodbrl"
     RESEND_API_KEY="your_resend_api_key"
@@ -69,24 +85,23 @@ This is a Next.js website where users can receive anonymous messages via their u
     ```
 
 5. Start the development server:
-
-    ```sh
+    ```bash
     npm run dev
     ```
 
-## Usage
+## 5. Usage
 
 1. Open your browser and go to `http://localhost:3000`.
 2. Sign up with a unique username and email.
 3. Verify your email using the code sent to your email.
 4. Sign in with your username or email and password.
-5. Navigate to your dashboard to see your unique link, and received messages, and toggle the "accept messages" state.
+5. Navigate to your dashboard to see your unique link, received messages, and toggle the "accept messages" state.
 
-## Live Demo
+## 6. Live Demo
 
 A live project demo can be found [here](https://mystery-note.vercel.app/).
 
-## Dependencies
+## 7. Dependencies
 
 - next
 - react
@@ -98,14 +113,13 @@ A live project demo can be found [here](https://mystery-note.vercel.app/).
 - resend
 - react-email
 
-## Contributing
+## 8. Contributing
 
-Feel free to contribute to this project by submitting bug reports, feature requests, or pull requests. 
+Contributions are welcome! If you find any issues or want to add new features, feel free to submit a pull request.
 
-## License
+1. Fork the repository.
+2. Create a new branch for your feature: `git checkout -b feature-name`.
+3. Commit your changes: `git commit -m "Add feature-name"`.
+4. Push to the branch: `git push origin feature-name`.
+5. Submit a pull request.
 
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to update the placeholders with your actual information and further customize the README as needed. Let me know if you need any more assistance!
