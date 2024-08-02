@@ -10,8 +10,9 @@ import {Form,FormControl,FormField,FormItem,FormLabel,FormMessage,} from '@/comp
 import { Input } from '@/components/ui/input';
 import { signInSchema } from "@/schemas/signInSchema"
 import { signIn } from "next-auth/react"
+import React from "react"
 
-const page = () => {
+const Page = () => {
     const { toast } = useToast();
     const router = useRouter();
 
@@ -99,4 +100,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
