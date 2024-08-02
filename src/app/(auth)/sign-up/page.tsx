@@ -66,8 +66,8 @@ const Page = () => {
             }
             else{
                 toast({
-                    title: response.status,
-                    description: response.message,
+                    title: "Failed",
+                    description: response.data.message,
                     variant: 'destructive',
                 });
             }
